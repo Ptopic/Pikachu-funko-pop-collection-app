@@ -51,8 +51,7 @@
 .header-top {
   grid-row-start: 1;
   grid-row-end: 1;
-  margin-top: 2rem;
-  padding: 2rem;
+  margin: 3rem;
   height: auto;
   display: flex;
   align-items: center;
@@ -60,7 +59,7 @@
 
 .header-top>img {
   width: 40px;
-  padding: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .header-top>p {
@@ -250,13 +249,12 @@
   .header-top {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
-    padding: 0;
+    margin: 2rem;
   }
 
   .header-top>img {
     width: 35px;
-    padding-right: .8rem;
+    padding-right: 1rem;
   }
 
   .header-top>p {
