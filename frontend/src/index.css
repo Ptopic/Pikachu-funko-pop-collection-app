@@ -1,69 +1,310 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  /* border: 2px red solid; */
+}
+
+/* @font-face {
+  font-family: "Pontiac";
+  src: local("Pontiac"),
+    url("./assets/fonts/pontiac.ttf") format("truetype");
+  font-weight: bold;
+} */
+
+/* @font-face {
+  font-family: "Rubrik_SemiBold";
+  src: local("Rubrik_SemiBold"),
+    url("./assets/fonts/Rubrik_SemiBold.ttf") format("truetype");
+  font-weight: bold;
+} */
+
+
+
+@font-face {
+  font-family: "Monserrat";
+  src: local("Monserrat"),
+    url("./assets/fonts/MontserratAlternates-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "RenogareSoft";
+  src: local("RenogareSoft"),
+    url("./assets/fonts/RenogareSoft-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
+
+
+
+/* ---------- Header ---------- */
+
+.header {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255, 198, 5, 1) 0%, rgba(246, 207, 6, 1) 50%, rgba(255, 198, 5, 1) 100%);
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  /* display: flex; */
+}
+
+.header-top {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin-top: 2rem;
+  padding: 2rem;
+  height: auto;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header-top>img {
+  width: 40px;
+  padding: 1.5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.header-top>p {
+  font-size: 1.6rem;
+  font-family: "RenogareSoft";
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-main>img {
+  height: 70%;
+  position: fixed;
+  left: 45%;
+  z-index: 2;
+}
+
+.header-title {
+  font-size: 22rem;
+  letter-spacing: 0rem;
+  color: white;
+  font-family: "RenogareSoft";
+  position: fixed;
+  left: 200px;
+  /* color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 1px 3px rgba(255, 255, 255, 1);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text; */
+}
+
+.header-title-top {
+  font-size: 22rem;
+  letter-spacing: 0rem;
+  color: white;
+  font-family: "RenogareSoft";
+  position: fixed;
+  z-index: 5;
+  right: 200px;
+}
+
+/* ---------- Figures list ---------- */
+
+.figures-list-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1001;
+  background: white;
+}
+
+.figures-list {
+  width: 100%;
+  margin: 4rem 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.figures-list>h1 {
+  margin: 4rem;
+  font-family: "RenogareSoft";
+}
+
+.collected-list {
+  z-index: 1001;
+  background: white;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.to-collect-list {
+  z-index: 1001;
+  background: white;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* ---------- Figures list - card ---------- */
+
+.card {
+  z-index: 1001;
+  background: white;
+  border: 2px solid rgba(246, 207, 6, 1);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  height: 450px;
+}
+
+/* .card.collected {
+  border: 2px solid red;
+} */
+
+.card img {
+  width: 250px;
+  height: 250px;
+  opacity: 0.6;
+}
+
+.card img.collected {
+  opacity: 1;
+}
+
+.card h1 {
+  display: inline-block;
+  font-family: "RenogareSoft";
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.card h2 {
+  display: inline-block;
+  font-family: "RenogareSoft";
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.card-info {
+  display: inline-block;
+}
+
+.card p {
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+.card p.collected {
+  text-decoration: line-through;
+  color: #4bb543;
+}
+
+.card a {
+  text-decoration: none;
+  background-color: black;
+  color: rgba(246, 207, 6, 1);
+  padding: .5rem 2rem;
+  border-radius: 14px;
+  font-family: "RenogareSoft";
+}
+
+.card a.collected {
+  pointer-events: none;
+  background-color: #cccccc;
+  color: rgba(246, 207, 6, 1);
+}
+
+
+
+
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding: 5rem 0rem;
+  text-align: center;
+  background-color: black;
+  color: rgba(246, 207, 6, 1);
+  font-family: "RenogareSoft";
+}
+
+
+/* ---------- Media querys ---------- */
+
+/* Phone */
+
+@media (max-width: 500px) {
+  .header-top {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0;
   }
-  a:hover {
-    color: #747bff;
+
+  .header-top>img {
+    width: 35px;
+    padding-right: .8rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .header-top>p {
+    font-size: 1.2rem;
+  }
+
+  .header-main>img {
+    position: fixed;
+    height: 11rem;
+    left: 9.5rem;
+  }
+
+  .header-title {
+    font-size: 4.5rem;
+    left: 2rem;
+  }
+
+  .header-title-top {
+    font-size: 4.5rem;
+    letter-spacing: 0rem;
+    right: 2rem;
+  }
+
+  .figures-list>h1 {
+    margin: 1.2rem;
+  }
+
+  .figures-list-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .collected-list {
+    margin: 4rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .to-collect-list {
+    margin: 4rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
   }
 }
+
+/* Tablet */
+
+@media (min-width:501px) and (max-width: 768px) {}

@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = 3001;
 
-const figuresRouter = require('./routes/figures');
 require('dotenv').config();
+
+const figuresRouter = require('./routes/figures');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(epxress.json());
