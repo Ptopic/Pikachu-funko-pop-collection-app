@@ -12,21 +12,14 @@
 <h2>Screenshot of Project 📸</h2>
 <br>
 
-<div align='center'>
-![image](https://user-images.githubusercontent.com/45322112/236638540-4a93ed2b-bc8a-4f3d-b438-d7da40cfe27e.png)
-
-</div>
+![Image](https://user-images.githubusercontent.com/45322112/236638540-4a93ed2b-bc8a-4f3d-b438-d7da40cfe27e.png)
 
 <br>
 
-<div align='center'>
-![image](https://user-images.githubusercontent.com/45322112/236638556-8b10889d-13e9-4233-aa4e-a6f4a71df775.png)
-</div>
+![Image](https://user-images.githubusercontent.com/45322112/236638556-8b10889d-13e9-4233-aa4e-a6f4a71df775.png)
 
 <br>
 
-<div align='center'>
 ![image](https://user-images.githubusercontent.com/45322112/236638567-d0103d9f-3134-4027-a9a7-399ff5cb3ddb.png)
-</div>
 
 <br>
