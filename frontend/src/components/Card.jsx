@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({ id, name, image, price, buyLink, isCollected, onClick }) {
 	const code = name.split(' ')[0];
-	const newName = name.replace(/[0-9]/g, '');
+	const newName = name.replace(/^[\d]+\s/g, '');
 
 	return (
 		<div className={isCollected ? 'card collected' : 'card'} onClick={onClick}>
