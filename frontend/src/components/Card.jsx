@@ -5,11 +5,13 @@ function Card({ id, name, image, price, buyLink, isCollected, onClick }) {
 	const newName = name.replace(/^[\d]+\s/g, '');
 
 	return (
-		<div className={isCollected ? 'card collected' : 'card'} onClick={onClick}>
-			<img src={image} alt="" className={isCollected ? 'collected' : ''} />
+		<div className={isCollected ? 'card collected' : 'card'}>
+			<div className="card-content" onClick={onClick}>
+				<img src={image} alt="" className={isCollected ? 'collected' : ''} />
 
-			<h1>{code}</h1>
-			<h2>{newName}</h2>
+				<h1>{code}</h1>
+				<h2>{newName}</h2>
+			</div>
 
 			<div className="card-info">
 				<a href={buyLink} className={isCollected ? 'collected' : ''}>
