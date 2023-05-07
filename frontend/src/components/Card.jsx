@@ -4,9 +4,10 @@ function Card({ id, name, image, price, buyLink, isCollected, onClick }) {
 	const code = name.split(' ')[0];
 	const newName = name.replace(/^[\d]+\s/g, '');
 
+	const mode = import.meta.env.VITE_MODE;
 	return (
 		<div className={isCollected ? 'card collected' : 'card'}>
-			<div className="card-content" onClick={onClick}>
+			<div className="card-content" onClick={mode === 'DEV' ? onClick : null}>
 				<img src={image} alt="" className={isCollected ? 'collected' : ''} />
 
 				<h1>{code}</h1>
